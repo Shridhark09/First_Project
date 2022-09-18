@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body  class="p-3 mb-2 bg-warning text-dark"> >
+<div  >
+    <div class="p-5 row">
+        <h1 class="text-center", class="test-success"> Register </h1>
+            <div class="col-4 col-lg-4,col-md-2 "></div>
+        <form  method="POST" class="col-4">
+                {% csrf_token %}<!-- Email input -->
+            <hr>
+            <div class="form-outline mb-3">
+                <!--                    <input type="email" id="form1Example1" class="form-control" />-->
+                <label class="form-label">username</label>
+                <div>{{form.username}}</div>
+                <!--                    <div class="form-text">We will never share your email</div>-->
+
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <!--                    <input type="password" id="form1Example2" class="form-control" />-->
+                <label class="form-label">Password</label>
+                <div>{{form.password1}}</div>
+
+            </div>
+            <!--                    <label class="form-label" >password</label>-->
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <!--                    <input type="password" id="form1Example2" class="form-control" />-->
+                <label class="form-label">Confirm Password</label>
+                <div>{{form.password2}}</div>
+
+            </div>
+            <!--                    <label c
+
+
+                              <2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                Already have an account?<a href="{%url 'login'%}">Login</a><br>
+                Back to <a href="{%url 'home'%}">Home</a><br>
+                {{form.errors }}
+            </div>
+        </form>
+         <hr class="my-4">
+    </div>
+</div>
+</body>
+</html>
+
+
